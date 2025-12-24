@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>genus physlo - Medical Center HTML5 Template</title>
+
+  <link rel="stylesheet" href="../assets/css/maicons.css">
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../assets/css/theme.css">
+   
+  <style>
+    :root {
+      --primary-color: #343f82;
+      --secondary-color: #88aced;
+      --accent-color: #4CAF50;
+      --light-color: #f8f9fa;
+      --dark-color: #343f82;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Header Styles */
+    .topbar {
+      background: var(--dark-color);
+      color: white;
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+    
+    .site-info a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    .social-mini-button a {
+      color: white;
+      margin: 0 8px;
+      font-size: 1.1rem;
+    }
+    
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+     
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    /* Services Section */
+    .services-section {
+      background: var(--light-color);
+      padding: 80px 0;
+    }
+    
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    /* Accordion Styles */
+    .accordion-behandlungsfeld .panel {
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    
+    .accordion-behandlungsfeld .mb-0 a {
+      display: block;
+      padding: 15px 20px;
+      background: #f8f9fa;
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+    
+    .accordion-behandlungsfeld .mb-0 a:after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .accordion-behandlungsfeld .mb-0 a.collapsed:after {
+      content: '-';
+    }
+    
+    .behandlungsfeld-content {
+      padding: 20px;
+      background: white;
+    }
+    
+    /* About Section */
+    .about-section {
+      padding: 80px 0;
+      background: white;
+    }
+    
+    .about-image {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+    }
+    
+    /* Expectations Section */
+    .expectations-section {
+      background: var(--secondary-color);
+      padding: 80px 0;
+      color: white;
+    }
+    
+    .expectation-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      height: 100%;
+    }
+    
+    .expectation-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: white;
+      transform: translateY(-5px);
+    }
+    
+    .icon-checkmark:before {
+      content: "✓ ";
+      color: var(--accent-color);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    /* Gallery Section */
+    .gallery-section {
+      padding: 60px 0;
+    }
+    
+    .gallery-item {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    
+    /* Footer */
+    .page-footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 60px 0 20px;
+    }
+    
+    .footer-menu {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-menu li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-menu a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    
+    .footer-menu a:hover {
+      color: white;
+    }
+    
+    .footer-sosmed a {
+      color: white;
+      font-size: 1.3rem;
+      margin-right: 15px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 60px 0;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      
+      .gallery-item {
+        height: 200px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 text-sm">
+            <div class="site-info">
+              <a href="#"><span class="mai-call text-primary"></span> +49983345562054</a>
+              <span class="divider">|</span>
+              <a href="#"><span class="mai-mail text-primary"></span> genus.physlo@gmail.com</a>
+            </div>
+          </div>
+         
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .topbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+      <div class="container">
+        
+        
+        <a class="navbar-brand" href="#"><img src="log.jpg" alt="logo" width="100px" ></a>
+
+        <form action="#">
+          
+        </form>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+            
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            
+          
+            
+              <a class="nav-link" href="#Leistungen">Leistungen</a>
+            </li>
+            
+            
+              <a class="nav-link" href="#Kontakt">Kontakt</a>
+            </li>
+            
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div> <!-- .container -->
+    </nav>
+  </header>
+
+  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/photo_2025-12-14_14-24-15.jpg);">
+    <div class="hero-section">
+      <div class="container text-center wow zoomIn">
+        <div class="col-xl-6 col-md-10 order-lg-2 text-left text-lg-right">
+          <div class="lc-block pt-5"><div>
+            <h1 class="mb-4 header-headline">Physiotherapie in Essen 
+Im Teelbruch Essen/ Kettwig
+            </h1>
+            <h2 class="mb-4 header-headline">
+Schmerzen lindern, Operationen vermeiden, Muskeln stärken</h2>
+            
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+    </div> <!-- .page-section -->
+    <section class="py-5"><div class="container py-lg-5"><div class="row"><div class="col-lg-10"><div class="lc-block"><div><h2>Sie suchen nach einer Behandlung gegen akute und chronische Beschwerden und eine nachhaltige Prävention gegen Wiederkehr in der Zukunft?</h2><p>Dann sind Sie bei uns genau richtig! Trainingstherapie und körperliche Aktivität! Dieses sind die Schlüsselelemente in der Behandlung und Prävention chronischer Erkrankungen.</p><p>Wir praktizieren eine für Sie befundgerechte Behandlung, da die Komplexität des Menschen in der Regel keine einfachen Lösungen zulässt. Dazu bedarf es eines differenzierten Befundes und ganzheitlichen Behandlungsansatzes. Auf dieser Basis können wir aus einer Vielzahl von Behandlungsmethoden eine individuelle Therapieplanung für Sie erstellen.</p></div></div></div></div></div></section>
+    
+    <div>
+      <div class="page-section">
+        <div class="container">
+          <p class="mb-4 d-block d-lg-none text-white font-weight-bold font20">Physiotherapie, Manuelle Therapie<br>
+            und Medizinische Trainingstherapie</p>
+      
+            <p><a  href="#Kontakt" class="btn btn-primary btn-lg text-white d-block d-lg-inline" title="Termin vereinbaren">Termin vereinbaren</a></p>
+
+            <a href="tel:+4998334562054" class="btn btn-primary btn-lg text-white d-block d-lg-inline" title="Anrufen">Anrufen</a>
+    </div>
+
+    
+      </div>
+       <div class="back-to-top"></div>
+
+
+  
+      
+      
+                   
+                  
+                    
+      </div> <!-- .row -->
+      <div>
+        
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+</div> <!-- .container -->
+    <div id="Leistungen" class="page-section">
+      <div class="container">
+        
+        <div class="container py-lg-5"><div class="row"><div class="col-md-12"><div class="lc-block"><div>
+          <h2 class="text-white">Ausgewählte Leistungen</h2><div class="row mb-5"> 
+            <div class="col-lg-6"><h3 class="h5 text-white mb-2 bg-secondary p-3">Aktive Physiotherapie</h3>
+              <div id="accordion-behandlungsfeld-aktiv" class="accordion-behandlungsfeld"><div class="panel mb-2">
+  <div id="heading-1"><div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-1" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-1"> Krankengymnastik (KG) </a>
+  </div></div><div id="collapse-behandlungsfeld-aktiv-1" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-1" data-parent="#accordion-behandlungsfeld-aktiv"><div class="row"><div class="col-12"><p>Ziel der Krankengymnastik ist es, die Bewegungs- und Funktionsfähigkeit des Körpers zu verbessern.</p>
+    <p>Dazu stehen unterschiedliche Behandlungsformen zur Verfügung:</p><ul>
+      <li>Förderung der Beweglichkeit durch aktive und funktionelle Übungen</li>
+      <li>Vermeidung von Versteifungen und Schmerzen durch passive Mobilisation</li>
+      <li>Stärkung von geschwächten Muskeln durch kräftigende Übungen zur Haltungs- und Koordinationsverbesserung</li>
+      <li>Entspannungsübungen für verspannte Muskeln zur Wiederherstellung optimaler muskulärer Voraussetzungen</li></ul></div>
+    </div></div></div><div class="panel mb-2"><div id="heading-2">
+      <div class="mb-0"> 
+        <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-2" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-2"> Gerätegestützte Krankengymnastik (KGG) </a></div></div><div id="collapse-behandlungsfeld-aktiv-2" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-2" data-parent="#accordion-behandlungsfeld-aktiv"><div class="row"><div class="col-12">
+    <p>Das Ziel dieser Therapieform ist die Verbesserung von Kraft, Ausdauer, Beweglichkeit und Koordination und wird zur Prävention und Rehabilitation genutzt. KGG ist eine aktive Behandlungsform , bei der medizinische Trainingsgeräte eingesetzt werden. Je nach Ihrem Krankheitsbild erstellen wir für Sie einen individuellen Behandlungsplan.</p></div></div></div></div><div class="panel mb-2"><div id="heading-3"><div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-3" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-3"> Krankengymnastik nach Bobath (KG-ZNS) </a></div></div>
+    <div id="collapse-behandlungsfeld-aktiv-3" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-3" data-parent="#accordion-behandlungsfeld-aktiv"><div class="row"><div class="col-12">
+      <p>Ziel ist die Behandlung einer Schädigung des Zentralnervensystems (ZNS) – also einer neurologischen Erkrankung oder Störung. Sie darf nur von eigens dafür zertifizierten Therapeuten angewendet werden. Im Bobath-Konzept gibt es keine standardisierten Übungen, sondern individuelle und alltagsbezogene therapeutische Aktivitäten, die den Patienten in seinem Tagesablauf begleiten.</p></div></div></div></div>
+      <div class="panel mb-2"><div id="heading-4"><div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-4" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-4"> Manuelle Therapie (MT) </a></div></div><div id="collapse-behandlungsfeld-aktiv-4" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-4" data-parent="#accordion-behandlungsfeld-aktiv">
+        <div class="row"><div class="col-12"><p>Ziel der MT ist die Wiederherstellung des Zusammenspieles zwischen Gelenken, Muskeln und Nerven bei Funktionsstörungen des Bewegungsapparates. Grundlage der Manuellen Therapie sind spezielle Handgriff- und Mobilisationstechniken, bei denen Schmerzen gelindert und Bewegungsstörungen beseitigt werden. Zum einen werden blockierte oder eingeschränkte Gelenke mithilfe sanfter Techniken mobilisiert, zum anderen können durch individuelle Übungen instabile Gelenke stabilisiert werden.</p></div></div></div></div
+    ><div class="panel mb-2"><div id="heading-5"><div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-5" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-5"> Manuelle Lymphdrainage (MLD) </a></div></div><div id="collapse-behandlungsfeld-aktiv-5" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-5" data-parent="#accordion-behandlungsfeld-aktiv"><div class="row"><div class="col-12"><p>Ziel der Behandlung ist es, die reduzierte Pumpfunktion des Gefäßsystems zu unterstützen. In erster Linie dient die manuelle Lymphdrainage der Entstauung von Schwellungen an Armen oder Beinen. Die Therapeuten verwenden dabei spezielle Handgriffe, bei denen die angestaute Flüssigkeit in Richtung der zuständigen Lymphknotenstation abtransportiert wird.</p></div></div></div></div><div class="panel mb-2"><div id="heading-6"><div class="mb-0"> 
+      <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-aktiv-6" aria-expanded="true" aria-controls="collapse-behandlungsfeld-aktiv-6"> Standardisierte Heilmittelkombination (D1) </a></div></div>
+      <div id="collapse-behandlungsfeld-aktiv-6" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-aktiv-6" data-parent="#accordion-behandlungsfeld-aktiv"><div class="row">
+        <div class="col-12"><p>Das Ziel dieser „Mini-Reha“ ist der Heilungsprozess komplexer Schädigungsbilder mit Maßnahmen der aktiven Bewegungstherapie (z.B. KG, MT) und therapiebegleitende Maßnahmen (z.B. Wärme-, Elektrotherapie). Wenn nicht genauer vom Arzt verordnet, wird individuell festgelegt, welche Maßnahmen in der Physiotherapie zum Einsatz kommen, bei einer Therapiezeit von einer Stunde.</p></div></div></div></div></div></div>
+        <div class="col-lg-6"><h3 class="h5 text-white mb-2 bg-secondary p-3">Passive therapiebegleitende Behandlung</h3>
+          <div id="accordion-behandlungsfeld-passiv" class="accordion-behandlungsfeld"><div class="panel mb-2"><div id="heading-1">
+            <div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-passiv-1" aria-expanded="true" aria-controls="collapse-behandlungsfeld-passiv-1"> Elektrotherapie (ET) </a></div></div>
+            <div id="collapse-behandlungsfeld-passiv-1" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-passiv-1" data-parent="#accordion-behandlungsfeld-passiv"><div class="row"><div class="col-12">
+              <p>Das Wirkungsprinzip der Elektrotherapie beruht auf der stimulierenden Wirkung elektrischen Stroms zur Lockerung der Muskulatur, Anregung der Durchblutung und Linderung von Schmerzen. Während der Anwendung fließen minimale Ströme durch den Körper oder Körperteile. Die Spannungen werden über Elektroden zugeführt, die mit der Hautoberfläche leitend verbunden sind.</p></div></div></div></div>
+              <div class="panel mb-2"><div id="heading-2"><div class="mb-0"> <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-passiv-2" aria-expanded="true" aria-controls="collapse-behandlungsfeld-passiv-2"> Ultraschall (US) </a></div></div>
+              <div id="collapse-behandlungsfeld-passiv-2" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-passiv-2" data-parent="#accordion-behandlungsfeld-passiv"><div class="row"><div class="col-12"><p>Ziel ist die Behandlung von Schmerzen und zur Unterstützung der Selbstheilung bei verschiedenen Erkrankungen des Bewegungsapparats. Die Schallwellen gehen durch die Haut und erzeugen Wärme und Vibrationen im Gewebe.</p></div></div></div></div><div class="panel mb-2"><div id="heading-3">
+                <div class="mb-0"> 
+                  <a class="font18 font-weight-medium collapsed" data-toggle="collapse" data-target="#collapse-behandlungsfeld-passiv-3" aria-expanded="true" aria-controls="collapse-behandlungsfeld-passiv-3"> Wärme-/Kältetherapie </a></div></div>
+                  <div id="collapse-behandlungsfeld-passiv-3" class="collapse behandlungsfeld-content mt-2" aria-labelledby="heading-behandlungsfeld-passiv-3" data-parent="#accordion-behandlungsfeld-passiv"><div class="row"><div class="col-12">
+                    <p>Wärme oder Kälte wird genutzt, um eine durchblutungsfördernde und schmerzlindernde Wirkung bei Ihnen zu erzielen. Die Wärmetherapie wird häufig als unterstützende Maßnahme eingesetzt, weil sie die Durchblutung fördert und entspannend auf die Muskulatur und das Gewebe einwirkt. Verfahren der Wärmetherapie sind zum Beispiel Wärmepackungen, die aus Moor oder Fango bestehen. Die Kältetherapie, zum Beispiel mit Kühlpacks, wirkt schmerzlindernd, entzündungshemmend und verbessert die Durchblutung. Die Wirkung der Kältetherapie ist je nach Temperatur unterschiedlich.</p></div></div></div></div><div class="panel mb-2"><div id="heading-4"><div class="mb-0"> 
+                      
+
+        
+        </div>
+        </div></div></div></div></div></div></div>
+        <p class="text-white mb-0">1 Ein Behandlungserfolg kann nicht garantiert werden. Er hängt wesentlich von der Einstellung und Mitarbeit des Patienten ab.</p></div></div></div></div></div>
+            </div></div></div></div></section>
+    
+  </div> <!-- .banner-home -->
+ 
+      </div> <!-- .row -->
+    
+  <div class="page-section">
+    <div class="container">
+      <section>
+        <div class="container py-lg-5"><div class="row"><div class="col-md-12">
+          <div class="lc-block"><div><h2 class="text-white">Das können Sie als PatientIn bei uns erwarten</h2></div></div></div>
+        </div><div class="row"><div class="col-lg-6"><div class="expectation">
+          <p class="font20 font-weight-bold mb-0 icon-checkmark">Verständliche Beratung</p></div></div>
+          <div class="expectation-overlay"><p class="mb-0">Sie erwarten eine klare und verständliche Kommunikation, die Sie abholt und mitnimmt. Sie müssen kein "Fachchinesisch" der Therapeuten kennen.</p></div>
+           <div class="col-lg-6"><div class="expectation"><div class="expectation-overlay"></div>
+          <p class="font20 font-weight-bold mb-0 icon-checkmark">Kurze Wartezeiten</p></div></div>
+        
+            <p class="mb-0">Natürlich ist unser Ansinnen, Ihnen minimale Wartezeiten zu ermöglichen! Wir arbeiten deswegen mit einer ausreichenden Zeittaktung, die es den Patienten ohne Druck ermöglicht sich zu ent- bzw. bekleiden.</p></div>
+            
+            
+            <div class="col-lg-6"><div class="expectation"><div class="expectation-overlay"></div>
+              <p class="font20 font-weight-bold mb-0 icon-checkmark">Moderne Ausstattung</p></div></div>
+              <p class="mb-0">Unser Behandlungsanspruch spiegelt sich auch in der Praxis wieder. Wir setzen für Sie in der Befundung und Therapie moderne und hochwertige Behandlungsgeräte, Liegen und Produkte wie Massagelotion und Öle ein. Wir legen viel Wert auf funktionelles Training aber natürlich auch Muskelaufbau. Unsere modernen und zertifizierten Sportgeräte unterstützen Sie dabei.</p></div>
+              
+              <div class="col-lg-6"><div class="expectation"><div class="expectation-overlay">
+                <p class="font20 font-weight-bold mb-0 icon-checkmark">Persönliche Betreuung</p></div></div>
+                <p class="mb-0">Vertrauen Sie auf unsere persönliche Betreuung während der gesamten Therapie, von der Terminvereinbarung bis zur letzten Behandlung. Bitte haben Sie Verständnis, dass es manchmal Zeit bis zum nächsten Termin dauert. Es ist keine böse Absicht.</p></div>
+                
+                <div class="col-lg-6"><div class="expectation">
+                   <p class="font20 font-weight-bold mb-0 icon-checkmark">Präventives Arbeiten</p></div></div>
+                  <div class="expectation-overlay"><p class="mb-0">Neben der Behandlung von akuten/ chronischen Beschwerden sind für Si
+                    <div class="col-lg-6"><div class="expectation"></div>
+                     <p class="font20 font-weight-bold mb-0 icon-checkmark">Entspannte Atmosphäre</p></div></div>
+       
+                   <p class="mb-0">Großzügige und helle Wartebereiche und Behandlungsräume lassen Sie fast vergessen beim Therapeuten zu sein. Genießen Sie unser gutes eigenes Tafelwasser. Wir verzichten dabei, wo immer möglich, auf den Einsatz von Plastik.</p></div>
+                   
+          
+
+  <div> 
+ </div>
+<div>
+  <div id="Kontakt" class="page-section">
+    <div class="container">
+      
+        <div class="container py-lg-5"><div class="row">
+          <div class="col-md-12">
+            <div class="lc-block">
+    </div> <!-- .bg-light -->
+    <div class="page-section">
+    <div class="container">
+      <p class="h2">Termin vereinbaren</p>
+      <p>Team4med Physiotherapie<br>Physiotherapie, Manuelle Therapie,<br>Medizinische Trainingstherapie&nbsp;</p>
+      <p>Telefon: +4998334572054<br>Telefan: +4998334562054 <br>Mail: genus.physlo@gmail.com<br>Web: www.genus physlo.com</p>
+      <div class="col-md-6 mt-5 mt-lg-"><div class="lc-block"><p class="h2">Öffnungszeiten</p><div class="row"><div class="col-3"><p class="mb-0">Montag:<br>Dienstag:<br>Mittwoch:<br>Donnerstag:<br>Freitag:<br>Samstag: </p></div><div class="col-9"><p class="mb-0">8 - 18 Uhr<br>8 - 18 Uhr<br>8 - 18 Uhr<br>8 - 18 Uhr<br>8 - 13 Uhr <br><a>Samstag: Nach Vereinbarung</p></div></div></div></div>
+      </div>
+
+      <form class="contact-form mt-5">
+        <div class="row mb-3">
+          <div class="col-sm-6 py-2 wow fadeInLeft">
+            
+            
+          </div>
+        </div>
+    
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  <div class="gallery-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Impressionen aus unseren Räumlichkeiten</h2>
+                
+            </div>
+        </div>
+        
+        <div class="row gallery-row">
+           
+            <!-- 3 صور صغيرة -->
+             <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\one.jpg" 
+                         alt="Massageraum" class="img-fluid">
+                    
+                       
+                    
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\photo_2025-12-15_23-56-47.jpg" 
+                         alt="Wartebereich" class="img-fluid">
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\photo_2025-12-15_23-55-40.jpg" 
+                         alt="Massageraum" class="img-fluid">
+                    
+                       
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\photo_2025-12-15_23-57-10.jpg" 
+                         alt="Trainingsbereich" class="img-fluid">
+                   
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\photo_2025-12-15_23-56-09.jpg" 
+                         alt="Massageraum" class="img-fluid">
+                    
+                       
+                    
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="c:\Users\user\Desktop\genus physlo\assets\img\photo_2025-12-14_14-24-15.jpg" 
+                         alt="Massageraum" class="img-fluid">
+                    
+                       
+                    
+                </div>
+            </div>
+            
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  
+
+  
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7043.22941923684!2d6.926554760669004!3d51.38178068690129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c537e2d65009%3A0x48a25742c5a6a264!2sPhysiotherapie%20Shadi!5e0!3m2!1sen!2s!4v1766083759036!5m2!1sen!2s" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+                    
+                       
+                    
+                </div>
+            </div>
+  </div> <!-- .bg-light -->
+
+  
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row px-md-3">
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Anschrift</h5>
+          <ul class="footer-menu">
+            <li>genus physlo Physiotherapie</a></li>
+            <li>Physiotherapie, Manuelle Therapie,</a></li>
+            <li>Medizinische Trainingstherapie </li>
+            <a>genus.physlo@gmail.com</a>
+            <br><br>
+            <li>Telefan: +4998334562054</li>
+            <br>
+            <li>Telefan: +4998334572054</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Öffnungszeiten</h5>
+          <ul class="footer-menu">
+            <li>Montag:8 - 18 Uhr</a>
+             <a>Dienstag:8 - 18 Uhr</a> 
+             <a> Mittwoch:8 - 18 Uhr</a>
+             <a>Donnerstag:8 - 18 Uhr</a> 
+              <a>Freitag:8 - 13 Uhr</a>
+              <a>Samstag: Nach Vereinbarung</a>
+              
+              
+              </li>
+            
+          
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Rechtliches</h5>
+          <ul class="footer-menu">
+            <li>Impressum</a></li>
+            <li>Datenschutz</a></li>
+            
+          </ul>
+        </div>
+        
+          
+          
+        </div>
+      </div>
+
+     
+     
+    </div>
+  </footer>
+
+<script src="../assets/js/jquery-3.5.1.min.js"></script>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../assets/vendor/wow/wow.min.js"></script>
+
+<script src="../assets/js/theme.js"></script>
+  
+</body>
+</html>
